@@ -153,7 +153,7 @@
 }
 .content__tab--active {
   background: var(--background-container);
-  color: var(--text-light);
+  color: var(--text-light) !important;
 }
 .content__tab--active span {
   color: var(--text-dark);

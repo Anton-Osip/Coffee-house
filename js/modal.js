@@ -115,7 +115,7 @@ class Modal {
 }
 
 let modal = new Modal()
-
+modal.init()
 window.addEventListener('hashchange', () => {
   modal.init()
 })
