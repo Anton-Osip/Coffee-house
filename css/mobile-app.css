@@ -1,0 +1,128 @@
+.mobile-app__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.mobile-app__info {
+  max-width: 630px;
+}
+.mobile-app__image img {
+  aspect-ratio: 726/726;
+}
+.mobile-app__image img {
+  width: 100%;
+}
+
+.mobile-app__title {
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.mobile-app__description {
+  color: var(--text-dark);
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+
+.mobile-app__button {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark);
+  background: transparent;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.mobile-app__button:first-child {
+  margin-right: 16px;
+}
+
+.btn__image-wrapper {
+  margin-right: 8px;
+}
+
+.button__image {
+  fill: var(--text-dark);
+  width: 36px;
+  height: 36px;
+  transition: fill 0.3s ease;
+}
+
+.button__suptitle {
+  display: block;
+  color: var(--text-dark);
+  font-size: 10px;
+  line-height: 140%;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.button__title {
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 150%;
+  transition: color 0.3s ease;
+}
+
+@media (hover: none) {
+  .mobile-app__button {
+    background: transparent;
+  }
+  .mobile-app__button .button__image {
+    fill: var(--text-dark);
+  }
+
+  .mobile-app__button .button__title,
+  .mobile-app__button .button__suptitle {
+    color: var(--text-dark);
+  }
+}
+@media (hover: hover) {
+  .mobile-app__button:hover {
+    background: var(--background-container);
+  }
+
+  .mobile-app__button:hover .button__image {
+    fill: var(--text-light);
+  }
+
+  .mobile-app__button:hover .button__title,
+  .mobile-app__button:hover .button__suptitle {
+    color: var(--text-light);
+  }
+}
+
+@media (max-width: 1142px) {
+  .mobile-app__wrapper {
+    flex-direction: column;
+    align-items: start;
+    gap: 100px;
+  }
+  .mobile-app__info {
+    max-width: 700px;
+  }
+  .mobile-app__title {
+    max-width: 636px;
+  }
+  .mobile-app__description {
+  }
+  .mobile-app__image {
+    align-self: center;
+  }
+}
+@media (max-width: 524px) {
+  .mobile-app__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+  .mobile-app__wrapper {
+    gap: 36px;
+  }
+}

@@ -1,0 +1,134 @@
+.enjoy__intro {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.enjoy__media {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--background-backdrop) url(../assets/image/img-hero.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+.enjoy__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.enjoy__content {
+  z-index: 10;
+  width: 100%;
+  padding: 100px;
+}
+.enjoy__title {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+  max-width: 530px;
+  margin-bottom: 42px;
+  color: var(--text-light);
+}
+
+.enjoy__description {
+  color: var(--text-light);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  max-width: 530px;
+  margin-bottom: 40px;
+}
+
+.enjoy__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 64px;
+  border-radius: 100px;
+  background: var(--background-body);
+  color: var(--text-dark);
+}
+
+.enjoy__button:hover::after {
+  opacity: 1;
+  margin: 0 7px;
+}
+
+.enjoy__button:after {
+  content: '';
+  opacity: 0;
+  display: block;
+  margin-left: -10px;
+  margin-right: -10px;
+  background: url(../assets/image/coffee-cup.svg) 50% / cover no-repeat;
+  width: 20px;
+  height: 20px;
+  transition: all linear 0.3s;
+}
+
+@media (hover: none) {
+  .enjoy__button:after {
+    content: '';
+    opacity: 0;
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+    background: url(../assets/image/coffee-cup.svg) 50% / cover no-repeat;
+    width: 20px;
+    height: 20px;
+    transition: all linear 0.3s;
+  }
+}
+@media (hover: hover) {
+  .enjoy__button:hover::after {
+    opacity: 1;
+    margin: 0 7px;
+  }
+
+  .enjoy__button:after {
+    content: '';
+    opacity: 0;
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+    background: url(../assets/image/coffee-cup.svg) 50% / cover no-repeat;
+    width: 20px;
+    height: 20px;
+    transition: all linear 0.3s;
+  }
+}
+
+@media (max-width: 768px) {
+  .enjoy__content {
+    padding: 100px 60px;
+  }
+  .enjoy__button::after {
+    opacity: 1;
+    margin: 0 7px;
+  }
+}
+
+@media (max-width: 668px) {
+  .enjoy__content {
+    padding: 60px 16px;
+  }
+
+  .enjoy__title {
+    font-size: 42px;
+    margin-bottom: 44px;
+    line-height: 112%;
+  }
+}
